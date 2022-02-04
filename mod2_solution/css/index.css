@@ -15,6 +15,10 @@ h1{
     font-size: 1.75em; 
 }
 
+h2{
+    display: none;
+}
+
 .box-row {
     margin: auto;
     gap: 24px; 
@@ -36,6 +40,19 @@ h1{
     font-weight: bold;
 }
 
+.first-color{
+    background-color: #d59898;
+}
+
+.middle-color{
+    background-color: #c14543;
+    color: white;
+}
+
+.last-color{
+    background-color: #e5d198;
+}
+
 .cell-box{
     background-color: lightgrey;
     width: 30vw;
@@ -52,10 +69,16 @@ h1{
     padding-right: 16px;
     overflow-y: hidden;    
     max-height: 96px;
-    
+    overflow-wrap: break-word;
+}
+
+.cell-text:hover{    
     cursor: nesw-resize;
     overflow-y: scroll;
-    overflow-wrap: break-word;
+}
+
+#mobile {
+    display: none;
 }
 
 @media (max-width: 767px) {
@@ -65,12 +88,32 @@ h1{
     }
 
     h1{
-        padding-bottom: 24px;
+        padding-bottom: 0px;
+        display: none;
+    }
+
+    h2{
+        display: block;
+        font-family: Verdana;
+        align-self: flex-start;
     }
 
     .cell-box{
         flex-grow: 1;
         min-width: 100%;
+    }
+
+    .cell-header {
+        width: auto;
+        align-self: stretch;
+    }
+
+    #non-mobile {
+        display: none;
+    }
+
+    #mobile {
+        display: block;
     }
 }
 
@@ -94,17 +137,4 @@ h1{
         flex-grow: 1;
         min-width: 40vw;
     }    
-}
-
-.first-color{
-    background-color: #d59898;
-}
-
-.middle-color{
-    background-color: #c14543;
-    color: white;
-}
-
-.last-color{
-    background-color: #e5d198;
 }
