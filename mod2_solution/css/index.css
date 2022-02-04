@@ -55,6 +55,7 @@ h1{
     
     cursor: nesw-resize;
     overflow-y: scroll;
+    overflow-wrap: break-word;
 }
 
 @media (max-width: 767px) {
