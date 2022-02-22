@@ -45,7 +45,6 @@ WARNING!!! WARNING!!!
   for (const name of names)
   {  
     var firstLetter = name.charAt(0).toLowerCase(); // get first name and converte to lower case
-    console.log("First Character ---->" + firstLetter);
     // decide which  method to call
     if (firstLetter === "j") 
       byeSpeaker.speak(name);  
