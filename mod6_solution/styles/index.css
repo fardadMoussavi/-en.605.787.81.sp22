@@ -1,0 +1,22 @@
+.valid {
+  border: 2px solid green;
+  color: green
+}
+
+.invalid {
+  border: 2px solid red;
+  color: red
+}
+
+.msg-green-color{
+  color: green
+}
+
+.msg-red-color {
+  color: red
+}
+
+.message {
+  font-size: 1.3em;
+  font-weight: bold;
+}
