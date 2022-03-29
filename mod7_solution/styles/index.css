@@ -1,0 +1,48 @@
+.green{
+	color: green;
+	text-align: center;
+}
+
+.yellow{
+	color: green;
+}
+
+.small {
+  width: 60px;
+  border-radius: 5px;
+  border: 1px solid grey;
+  height: 30px;
+  margin-left: 2px;
+}
+
+.emptyBucket {
+	font-weight: bold;
+	color: red;
+	font-size: 1.2em;
+	margin-left: 2px;
+}
+ol {
+	text-align: center;
+	list-style-type: none;
+	padding: 0;
+	border: 1px solid #ddd;
+  	flex-wrap: wrap;
+  	padding-left: 0;
+  }
+  
+  ol li {
+	padding: 8px 16px;
+	border-bottom: 1px solid #ddd;
+	list-style: none;
+    flex: 0 0 33.333333%;
+  }
+  
+  ol li:last-child {
+	border-bottom: none
+  }
+li > button {
+	margin-left: 6px;
+}
+button > span {
+	color: green;
+}
