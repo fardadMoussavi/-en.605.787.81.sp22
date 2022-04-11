@@ -2,9 +2,9 @@
    'use strict';
 
    angular.module('NarrowItDownApp',        [])
-      .controller('NarrowItDownController', NarrowItDownController)
-      .service('menuSearchService',         MenuSearchService)
-      .directive('foundItems',              FoundItemsDirective);
+      .controller('NarrowItDownController', NarrowItDownController) // controller used by html
+      .service('menuSearchService',         MenuSearchService) // type of service
+      .directive('foundItems',              FoundItemsDirective); // directive
 
    MenuSearchService.$inject = ['$http'];
    function MenuSearchService($http) {
@@ -19,32 +19,34 @@
            };
            var onSuccess = function (response)
            {
-               var sterm   = (searchTerm || "").toLowerCase();
-               var hasTerm    = (sterm.length > 0);
-               var hasData    = (response && response.data && response.data.menu_items);
-               var foundItems = [];
-
-               if (hasTerm && hasData)
-               {
-                   var responseItems = response.data.menu_items;
-                   var index;
-
-                   for (index = 0; index < responseItems.length; index++)
-                   {
-                       var currentItem = responseItems[index];
-                       var safeDescription = (currentItem.description || "").toLowerCase();
-
-                       if (safeDescription.indexOf(sterm) >= 0)
-                       {
-                           foundItems.push(currentItem);
-                       }
-                   }
-               }
-
-               return foundItems;
+               return HandleSucess(searchTerm, response);
            };
            return $http(requestConfig).then(onSuccess);
         };
+   }
+
+   function HandleSucess(searchTerm, response)
+   {
+    var sterm   = (searchTerm || "").toLowerCase();
+    var foundItems = [];
+
+    if (sterm.length > 0 &&
+        response &&
+        response.data &&
+        response.data.menu_items)
+    {
+        var rItems = response.data.menu_items;
+        var index;
+        for (index = 0; index < rItems.length; index++)
+        {
+            var description = (rItems[index].description || "").toLowerCase();
+            if (description.indexOf(sterm) >= 0)
+            {
+                foundItems.push(rItems[index]);
+            }
+        }
+    }
+    return foundItems;
    }
 
    function FoundItemsDirective()
