@@ -8,7 +8,7 @@
     $stateProvider
     .state("home", // home state - default - just the template
     {
-        url: "/",
+        url: "-en.605.787.81.sp22/mod9_solution/",
         templateUrl: "templates/home.html",
     })
     .state("categories", // categories state - template and controller
