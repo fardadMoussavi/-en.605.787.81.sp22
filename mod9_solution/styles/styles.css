@@ -1,8 +1,8 @@
 h1 {
-  margin-bottom: 30px;
+  margin-bottom: 32px;
 }
 input[type="text"] {
-  width: 200px;
+  width: 240px;
   float: left;
 }
 .narrow-button {
@@ -11,12 +11,12 @@ input[type="text"] {
 }
 .loader {
   display: none;
-  margin-left: 5px;
-  font-size: 10px;
+  margin-left: 6px;
+  font-size: 11px;
   float: left;
-  border-top: 1.1em solid rgba(147, 147, 147, 0.2);
+  border-top: 1.1em solid rgba(147, 147, 147, 0.3);
   border-right: 1.1em solid rgba(147, 147, 147, 0.2);
-  border-bottom: 1.1em solid rgba(147, 147, 147, 0.2);
+  border-bottom: 1.1em solid rgba(147, 147, 147, 0.3);
   border-left: 1.1em solid #676767;
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
@@ -52,6 +52,6 @@ input[type="text"] {
 }
 
 .m-1 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
